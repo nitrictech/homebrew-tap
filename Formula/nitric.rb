@@ -5,21 +5,21 @@
 class Nitric < Formula
   desc "Nitric CLI"
   homepage "https://nitric.io/"
-  version "1.0.2-develop.1"
+  version "1.0.2-develop.2"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nitrictech/cli/releases/download/v1.0.2-develop.1/nitric_1.0.2-develop.1_macOS_x86_64.tar.gz"
-      sha256 "ca297c885ef13711c38feb4b4db0d6444a7fef1c24632e264a338320d0c63e5d"
+      url "https://github.com/nitrictech/cli/releases/download/v1.0.2-develop.2/nitric_1.0.2-develop.2_macOS_x86_64.tar.gz"
+      sha256 "82bb134081f6db8e38f715190256c778b7a9808d2c6419aaa7c18766f763bdc2"
 
       def install
         bin.install "nitric"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nitrictech/cli/releases/download/v1.0.2-develop.1/nitric_1.0.2-develop.1_macOS_arm64.tar.gz"
-      sha256 "ea59d983f68e7d2b48602c4b1f3bb81a6f8a019066eaad4f7916c2c6c8611afe"
+      url "https://github.com/nitrictech/cli/releases/download/v1.0.2-develop.2/nitric_1.0.2-develop.2_macOS_arm64.tar.gz"
+      sha256 "db9427512f0aad58e554d8143605ef4eadcc405a7090b2bd9b93a3fb3f5ce8df"
 
       def install
         bin.install "nitric"
@@ -29,16 +29,16 @@ class Nitric < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/nitrictech/cli/releases/download/v1.0.2-develop.1/nitric_1.0.2-develop.1_Linux_x86_64.tar.gz"
-      sha256 "998e651409464a8af82e825b6d0c5cce1deae13424081b99a173d4779bad572b"
+      url "https://github.com/nitrictech/cli/releases/download/v1.0.2-develop.2/nitric_1.0.2-develop.2_Linux_x86_64.tar.gz"
+      sha256 "f7d93104215bba1062e0763dfaa4650817438ff169993048e513d75be3192529"
 
       def install
         bin.install "nitric"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nitrictech/cli/releases/download/v1.0.2-develop.1/nitric_1.0.2-develop.1_Linux_arm64.tar.gz"
-      sha256 "321ed26742b5e97dc78f12227ce5fa683bf5c8c2e80fed6b3e62513aa31436bd"
+      url "https://github.com/nitrictech/cli/releases/download/v1.0.2-develop.2/nitric_1.0.2-develop.2_Linux_arm64.tar.gz"
+      sha256 "954d4757372f9506de65cc5a686d4779e9f9cc7cf29c2b226312e33bde645d8b"
 
       def install
         bin.install "nitric"
