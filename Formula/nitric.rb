@@ -5,21 +5,21 @@
 class Nitric < Formula
   desc "Nitric CLI"
   homepage "https://nitric.io/"
-  version "1.2.1"
+  version "1.3.0"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nitrictech/cli/releases/download/v1.2.1/nitric_1.2.1_macOS_x86_64.tar.gz"
-      sha256 "d8f551e70dd95a237e776a62b4a4d78ba59403bfcc549c31e02579d18179d610"
+      url "https://github.com/nitrictech/cli/releases/download/v1.3.0/nitric_1.3.0_macOS_x86_64.tar.gz"
+      sha256 "9e35db48d3771b83612cc8bbfa4cb7362e67b6fea9c276a674938cd560de1d98"
 
       def install
         bin.install "nitric"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nitrictech/cli/releases/download/v1.2.1/nitric_1.2.1_macOS_arm64.tar.gz"
-      sha256 "662ab481c64af393760b89027af59f60a387edc0af3351c9e4d2ac8cea2d30b2"
+      url "https://github.com/nitrictech/cli/releases/download/v1.3.0/nitric_1.3.0_macOS_arm64.tar.gz"
+      sha256 "6be2af45dde8284268e5c7c35ddb651cfd6613ae02f16a519bb1353e34d410f7"
 
       def install
         bin.install "nitric"
@@ -29,16 +29,16 @@ class Nitric < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nitrictech/cli/releases/download/v1.2.1/nitric_1.2.1_Linux_arm64.tar.gz"
-      sha256 "d071cff1d29fd3ac86e1fab0128e3c7b1666410f7b57b5c7639cb576cc6c1200"
+      url "https://github.com/nitrictech/cli/releases/download/v1.3.0/nitric_1.3.0_Linux_arm64.tar.gz"
+      sha256 "37597b770e06401d2f2bf046b67d50d91e8c10bc040ccf8486dd458140b3f101"
 
       def install
         bin.install "nitric"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nitrictech/cli/releases/download/v1.2.1/nitric_1.2.1_Linux_x86_64.tar.gz"
-      sha256 "19b3e678b18bec2241d6258d4360fc1a6052925158d1958a723ca4045adc596d"
+      url "https://github.com/nitrictech/cli/releases/download/v1.3.0/nitric_1.3.0_Linux_x86_64.tar.gz"
+      sha256 "a3bb3f790c5ac8d7502d967a3f7c4648c23c69be893d6a5d127e85e5430e4c8b"
 
       def install
         bin.install "nitric"
