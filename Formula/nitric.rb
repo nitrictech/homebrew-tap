@@ -5,21 +5,21 @@
 class Nitric < Formula
   desc "Nitric CLI"
   homepage "https://nitric.io/"
-  version "1.3.0"
+  version "1.4.0"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nitrictech/cli/releases/download/v1.3.0/nitric_1.3.0_macOS_x86_64.tar.gz"
-      sha256 "9e35db48d3771b83612cc8bbfa4cb7362e67b6fea9c276a674938cd560de1d98"
+      url "https://github.com/nitrictech/cli/releases/download/v1.4.0/nitric_1.4.0_macOS_x86_64.tar.gz"
+      sha256 "54e4098875527f4de5d8e55cfe12eb9beff952a30793988294bedb9514232d81"
 
       def install
         bin.install "nitric"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nitrictech/cli/releases/download/v1.3.0/nitric_1.3.0_macOS_arm64.tar.gz"
-      sha256 "6be2af45dde8284268e5c7c35ddb651cfd6613ae02f16a519bb1353e34d410f7"
+      url "https://github.com/nitrictech/cli/releases/download/v1.4.0/nitric_1.4.0_macOS_arm64.tar.gz"
+      sha256 "a205873edb83504319fc42c0669bba2ef6ccb31b7903c143e114f7e3e32cc023"
 
       def install
         bin.install "nitric"
@@ -29,16 +29,16 @@ class Nitric < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nitrictech/cli/releases/download/v1.3.0/nitric_1.3.0_Linux_arm64.tar.gz"
-      sha256 "37597b770e06401d2f2bf046b67d50d91e8c10bc040ccf8486dd458140b3f101"
+      url "https://github.com/nitrictech/cli/releases/download/v1.4.0/nitric_1.4.0_Linux_arm64.tar.gz"
+      sha256 "e39c8d09d4503dcc88524e1ae6159d3abc1b912619131c2a7561153f9f5a3310"
 
       def install
         bin.install "nitric"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nitrictech/cli/releases/download/v1.3.0/nitric_1.3.0_Linux_x86_64.tar.gz"
-      sha256 "a3bb3f790c5ac8d7502d967a3f7c4648c23c69be893d6a5d127e85e5430e4c8b"
+      url "https://github.com/nitrictech/cli/releases/download/v1.4.0/nitric_1.4.0_Linux_x86_64.tar.gz"
+      sha256 "60ae4ae611ad4936e14c11393ee15b0f5aab90c6f70873f5eb9c1a53d6cfe195"
 
       def install
         bin.install "nitric"
