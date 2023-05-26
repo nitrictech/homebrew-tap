@@ -5,24 +5,24 @@
 class Nitric < Formula
   desc "Nitric CLI"
   homepage "https://nitric.io/"
-  version "1.18.1"
+  version "1.19.0"
   license "Apache 2.0"
 
   depends_on "git"
   depends_on "pulumi" => :optional
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/nitrictech/cli/releases/download/v1.18.1/nitric_1.18.1_macOS_arm64.tar.gz"
-      sha256 "98423928a74caf8637ff811da1e49e3f8f495ea959111eafd04b08ceb4fe148f"
+    if Hardware::CPU.intel?
+      url "https://github.com/nitrictech/cli/releases/download/v1.19.0/nitric_1.19.0_macOS_x86_64.tar.gz"
+      sha256 "27fae0e3b1237d740cbc9669fe9a2a305d117bff6fac3ab0aa4ed38f56820177"
 
       def install
         bin.install "nitric"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/nitrictech/cli/releases/download/v1.18.1/nitric_1.18.1_macOS_x86_64.tar.gz"
-      sha256 "b86c0adb8c910aa7f24c5244c8e6e9a3be9a24c4f7e1172ca195887d1132f8c3"
+    if Hardware::CPU.arm?
+      url "https://github.com/nitrictech/cli/releases/download/v1.19.0/nitric_1.19.0_macOS_arm64.tar.gz"
+      sha256 "9b7d65b120c4c972e5511b9fabdcea77cae8ae5371b4c374fe27c88da5e2ebfc"
 
       def install
         bin.install "nitric"
@@ -31,17 +31,17 @@ class Nitric < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/nitrictech/cli/releases/download/v1.18.1/nitric_1.18.1_Linux_x86_64.tar.gz"
-      sha256 "5f85609bcb84ec6fd6ffc77b3682262dec63d0614e26a58382383fcb4ddcdf11"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/nitrictech/cli/releases/download/v1.19.0/nitric_1.19.0_Linux_arm64.tar.gz"
+      sha256 "9f8426a1e10e94919e4e3012dd966428a54073b41d3cb26b748221be3344af0c"
 
       def install
         bin.install "nitric"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nitrictech/cli/releases/download/v1.18.1/nitric_1.18.1_Linux_arm64.tar.gz"
-      sha256 "b8b67d3db1b881be5e73e7494e933620b009aa80ed7865ef03eb47c8255a667f"
+    if Hardware::CPU.intel?
+      url "https://github.com/nitrictech/cli/releases/download/v1.19.0/nitric_1.19.0_Linux_x86_64.tar.gz"
+      sha256 "5bac3e3e16e4b606b9121c9e7681972cabf7bb7414acbf591b4e7febcb59fb69"
 
       def install
         bin.install "nitric"
