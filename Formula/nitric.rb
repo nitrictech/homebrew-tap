@@ -5,7 +5,7 @@
 class Nitric < Formula
   desc "Nitric CLI"
   homepage "https://nitric.io/"
-  version "1.29.4"
+  version "1.29.5"
   license "Apache 2.0"
 
   depends_on "git"
@@ -13,16 +13,16 @@ class Nitric < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/nitrictech/cli/releases/download/v1.29.4/nitric_1.29.4_macOS_arm64.tar.gz"
-      sha256 "01b8d07e25dafffc0a89bdc9b270280f6d243c90247b019b757bdf90c2b7ea19"
+      url "https://github.com/nitrictech/cli/releases/download/v1.29.5/nitric_1.29.5_macOS_arm64.tar.gz"
+      sha256 "d4be3422023c5b0ad3965c70e8f24979d21bf2b1f902a6272e6c68699c573235"
 
       def install
         bin.install "nitric"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nitrictech/cli/releases/download/v1.29.4/nitric_1.29.4_macOS_x86_64.tar.gz"
-      sha256 "befda4729e22398edaa69500cb75edf7b46cce30c85663bc8cf7eeeed30a9a04"
+      url "https://github.com/nitrictech/cli/releases/download/v1.29.5/nitric_1.29.5_macOS_x86_64.tar.gz"
+      sha256 "4144b27c0c9daac8201d3a71d1c516e0ef065e0e74506e8069a398d47a4e61a6"
 
       def install
         bin.install "nitric"
@@ -32,16 +32,16 @@ class Nitric < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nitrictech/cli/releases/download/v1.29.4/nitric_1.29.4_Linux_arm64.tar.gz"
-      sha256 "6fd86ac4e5c0e93f3089cbdccf879dc51007723f125805e8ff07acc615a40ab9"
+      url "https://github.com/nitrictech/cli/releases/download/v1.29.5/nitric_1.29.5_Linux_arm64.tar.gz"
+      sha256 "d59983e19fce0bc607dcec8cff6d9398f3e601446675a45e971085d05b2e2338"
 
       def install
         bin.install "nitric"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nitrictech/cli/releases/download/v1.29.4/nitric_1.29.4_Linux_x86_64.tar.gz"
-      sha256 "7ca26a05c2a6f77c29b91a223b540a9262a0de1f8fa797b4978cc12f483f5a02"
+      url "https://github.com/nitrictech/cli/releases/download/v1.29.5/nitric_1.29.5_Linux_x86_64.tar.gz"
+      sha256 "f502bab78c35e573a394367d893bd0f368ed564e98e9c2bca6ec65dc4800c995"
 
       def install
         bin.install "nitric"
