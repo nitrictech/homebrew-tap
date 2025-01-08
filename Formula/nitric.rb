@@ -5,7 +5,7 @@
 class Nitric < Formula
   desc "Nitric CLI"
   homepage "https://nitric.io/"
-  version "1.56.2"
+  version "1.56.3"
   license "Apache 2.0"
 
   depends_on "git"
@@ -13,16 +13,16 @@ class Nitric < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/nitrictech/cli/releases/download/v1.56.2/nitric_1.56.2_macOS_arm64.tar.gz"
-      sha256 "4a7a0e2d05556ee41e8f4b0c99a14209b08a33666c8bed87704272a9576442a7"
+      url "https://github.com/nitrictech/cli/releases/download/v1.56.3/nitric_1.56.3_macOS_arm64.tar.gz"
+      sha256 "52139e0aa1f9af5f92f1cba46861a689f826503b9e748eb6d71826e453bfbe3d"
 
       def install
         bin.install "nitric"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nitrictech/cli/releases/download/v1.56.2/nitric_1.56.2_macOS_x86_64.tar.gz"
-      sha256 "09db04ae0c6bdc29a73ea8e8395d0e4babaac749cb6b8f0b7de88312c4513e37"
+      url "https://github.com/nitrictech/cli/releases/download/v1.56.3/nitric_1.56.3_macOS_x86_64.tar.gz"
+      sha256 "20ca2e9904c53a76563a09014862d9535f1fe39e6456e1b22221348064f81b15"
 
       def install
         bin.install "nitric"
@@ -31,17 +31,17 @@ class Nitric < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/nitrictech/cli/releases/download/v1.56.2/nitric_1.56.2_Linux_x86_64.tar.gz"
-      sha256 "6a345fa9debaa4b4db7f4233ff147b1d9c775a5c58585396e12db0991612681e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/nitrictech/cli/releases/download/v1.56.3/nitric_1.56.3_Linux_arm64.tar.gz"
+      sha256 "8ee140d511e6253a57ab336f6286d30a191662c4d2c994797bdc1d51c69bac16"
 
       def install
         bin.install "nitric"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nitrictech/cli/releases/download/v1.56.2/nitric_1.56.2_Linux_arm64.tar.gz"
-      sha256 "40ec9c6bd9590d5cf61fcce9335ffb9859c4d7b608e2ae399e7b4f590016a795"
+    if Hardware::CPU.intel?
+      url "https://github.com/nitrictech/cli/releases/download/v1.56.3/nitric_1.56.3_Linux_x86_64.tar.gz"
+      sha256 "2843dad959a4ede3cf70763b9c313c1be34d54af29a22d6aff428fed10e90796"
 
       def install
         bin.install "nitric"
