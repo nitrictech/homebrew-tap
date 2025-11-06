@@ -5,23 +5,23 @@
 class Suga < Formula
   desc "Suga CLI"
   homepage "https://app.addsuga.com/"
-  version "0.6.0"
+  version "0.6.1"
   license "Apache 2.0"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nitrictech/suga/releases/download/v0.6.0/suga_0.6.0_darwin_amd64.tar.gz"
-      sha256 "6689ed672e2398191132a4510f2e45bec0480fd8eb8e7c2e6dba0889dd323c2a"
+      url "https://github.com/nitrictech/suga/releases/download/v0.6.1/suga_0.6.1_darwin_amd64.tar.gz"
+      sha256 "5e3e594eea5b72165fa1820f1eb35f92d33c36c9e669a200e9710374fc0b50de"
 
       def install
         bin.install "suga"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nitrictech/suga/releases/download/v0.6.0/suga_0.6.0_darwin_arm64.tar.gz"
-      sha256 "0f59fa1cb6b444966055755fe04f243969ce400b2b31f64e1e774df7f55749f4"
+      url "https://github.com/nitrictech/suga/releases/download/v0.6.1/suga_0.6.1_darwin_arm64.tar.gz"
+      sha256 "74c27cdf60976103ab391b73c5490f471d7a5005f00cce5e6188c875c9ad98cc"
 
       def install
         bin.install "suga"
@@ -31,15 +31,15 @@ class Suga < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nitrictech/suga/releases/download/v0.6.0/suga_0.6.0_linux_amd64.tar.gz"
-      sha256 "b4d8a044b873b72cc00f8f3c55ee4b641e2eaa489b60eef45c4d37abaf8b1f99"
+      url "https://github.com/nitrictech/suga/releases/download/v0.6.1/suga_0.6.1_linux_amd64.tar.gz"
+      sha256 "1c2f771fc7f621ec42298ac3df852fd2b4fa5fa3f39c2c8c9635e6f5137875f4"
       def install
         bin.install "suga"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nitrictech/suga/releases/download/v0.6.0/suga_0.6.0_linux_arm64.tar.gz"
-      sha256 "3c516f1acd5dc593c584e00e81cadac4427e8f59780835380fde8e2dfdae3223"
+      url "https://github.com/nitrictech/suga/releases/download/v0.6.1/suga_0.6.1_linux_arm64.tar.gz"
+      sha256 "b1e699649ad1cb55081712f1da0dd656f77ad644a194ed166f1d0cba1c683240"
       def install
         bin.install "suga"
       end
